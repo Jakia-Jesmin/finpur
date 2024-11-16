@@ -126,7 +126,7 @@ header .container {
 
 
 .hero {
-    background: url('Image1.jpg') no-repeat center center; /* Set your background image */
+    background: url('images/Image1.jpg') no-repeat center center; /* Set your background image */
     background-size: cover; /* Cover the entire hero section */
     padding: 60px 20px; /* Adjust the padding */
     display: flex; /* Use flexbox for layout */
