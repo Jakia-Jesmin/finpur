@@ -1,15 +1,13 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: Century Gothic, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
 }
 
 html {
@@ -27,7 +25,7 @@ header {
     top: 0;                /* Aligns it to the very top of the page */
     width: 100%;           /* Ensures the header spans the full width of the page */
     z-index: 1000;         /* Keeps the header on top of other content */
-    background-color: #4c598f; /* Set a background color for visibility */
+    background-color: #2c3f8a; /* Set a background color for visibility */
     padding: 5px 0;       /* Optional padding for styling */
 }
 
@@ -46,10 +44,6 @@ header .container {
 
 .header-right {
     margin-left: auto; /* Pushes the right section to start from the right */
-
-   
-        display: flex;
-        align-items: center;
 }
 
 .header-left h1 a {
@@ -99,41 +93,6 @@ header .container {
     color: #4CAF50;         /* Change color on hover for visual feedback */
 }
 
-/* Hide the navigation menu by default for small screens */
-.nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-/* Make navigation visible when active */
-.nav-menu.active {
-    display: flex;
-}
-
-/* Menu button styles */
-.menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: none; /* Initially hidden for large screens */
-}
-
-/* Hamburger and close icon styling */
-.menu-icon, .close-icon {
-    font-size: 1.8rem;
-    color: #333;
-}
-
-
 /* Mobile Header */
 @media (max-width: 767px) {
     .header-left h1 {
@@ -170,17 +129,6 @@ header .container {
     }
 }
 
-/* Show menu button on small screens */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Hide the desktop menu */
-    .nav-menu {
-        display: none;
-    }
-}
 
 .hero {
     background: url('images/Image1.jpg') no-repeat center center; /* Set your background image */
@@ -233,14 +181,11 @@ header .container {
 }
 
 /* Featured articles section*/
-
-
-
 .featured-articles {
     padding: 50px 0;
     text-align: center;
     background-color: #f8f9fa;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .featured-articles h3 {
@@ -559,6 +504,3 @@ header.sticky {
     background-color: #11023d;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
-
