@@ -1,0 +1,564 @@
+body {
+    font-family: Century Gothic, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;       /* Fixes the header to the top */
+    top: 0;                /* Aligns it to the very top of the page */
+    width: 100%;           /* Ensures the header spans the full width of the page */
+    z-index: 1000;         /* Keeps the header on top of other content */
+    background-color: #4c598f; /* Set a background color for visibility */
+    padding: 5px 0;       /* Optional padding for styling */
+}
+
+body {
+    margin-top: 80px;      /* Adjusts the body to avoid overlap with the fixed header */
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Ensure container spans the full width */
+    text-align: left;
+}
+
+.header-right {
+    margin-left: auto; /* Pushes the right section to start from the right */
+
+   
+        display: flex;
+        align-items: center;
+}
+
+.header-left h1 a {
+    font-size: 2rem;           /* Increase the size of the logo text */
+    font-weight: bold;         /* Make the logo bold */
+    color: #d7f6d8;            /* Choose a color that represents trust, like green */
+    letter-spacing: 2px;       /* Add some space between the letters for elegance */
+    text-transform: uppercase; /* Make the text uppercase for a strong brand identity */
+    font-family: 'Arial', sans-serif; /* Optional: set a specific font */
+    text-decoration: none;
+}
+
+.header-left h1 a:hover {
+    color: #4CAF50; /* optional hover color */
+}
+.header-left h1 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+
+.header-right nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list {
+    list-style-type: none;  /* Remove default list bullets */
+    display: flex;          /* Align list items horizontally */
+    gap: 20px;              /* Space between items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-list li a {
+    color: #fff;            /* Set link color */
+    text-decoration: none;  /* Remove underline from links */
+    padding: 8px 12px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-list li a:hover {
+    color: #4CAF50;         /* Change color on hover for visual feedback */
+}
+
+/* Hide the navigation menu by default for small screens */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Make navigation visible when active */
+.nav-menu.active {
+    display: flex;
+}
+
+/* Menu button styles */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; /* Initially hidden for large screens */
+}
+
+/* Hamburger and close icon styling */
+.menu-icon, .close-icon {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+
+/* Mobile Header */
+@media (max-width: 767px) {
+    .header-left h1 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .header-right nav ul {
+        display: flex;
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-right nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Tablet and Desktop Header */
+@media (min-width: 768px) {
+    .header-left h1 {
+        font-size: 2rem; /* Larger font size */
+    }
+
+    .header-right nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .header-right nav ul li {
+        text-align: right;
+    }
+}
+
+/* Show menu button on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the desktop menu */
+    .nav-menu {
+        display: none;
+    }
+}
+
+.hero {
+    background: url('images/Image1.jpg') no-repeat center center; /* Set your background image */
+    background-size: cover; /* Cover the entire hero section */
+    padding: 60px 20px; /* Adjust the padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    color: aliceblue;
+    height: 55vh;
+    font-size: 28px;
+    margin-top: 25px;
+}
+
+.container {
+    width: 90%; /* Container width */
+    margin: auto; /* Center container */
+}
+
+.search-bar {
+    display: flex; /* Align the input and button in a row */
+    margin-top: 25px; /* Space above the search bar */
+    height: 40px;
+}
+
+.search-bar input[type="text"] {
+    width: 400px;
+    vertical-align:left;
+    border-radius: 4px 0 0 4px; 
+    border: 1px solid #ddd; 
+    font-size: 17px;
+    font-family: Century Gothic, sans-serif;
+    padding-left: 15px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #654f4f;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: Century Gothic, sans-serif;
+}
+
+
+.search-bar button:hover {
+    background-color: #3e8e41; /* Darker shade on hover */
+}
+
+/* Featured articles section*/
+
+
+
+.featured-articles {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+}
+
+.featured-articles h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: left;
+    padding-left: 70px;
+    padding-bottom: 20px; /* Adjust to your desired value */
+    margin: 0; /* Optional: removes default margin for tighter spacing */
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    max-width: 100%;
+}
+
+/* Article Card Styles */
+article {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling for Responsive Aspect Ratio */
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Content Inside Article */
+article h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 15px 10px 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+article p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured-articles h3 {
+        font-size: 1.8em;
+    }
+}
+
+
+
+/* News and Event Section */
+
+.news-events {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.news-events h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: left;
+    padding-left: 70px;
+    padding-bottom: 20px; /* Adjust to your desired value */
+    margin: 0; /* Optional: removes default margin for tighter spacing */
+    
+}
+
+/* News Item Grid */
+.news-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* News Item Grid Layout */
+.news-item .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* News Image Styling */
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* News Content */
+.news-item p {
+    padding: 15px;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Read More Link */
+.news-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-events h3 {
+        font-size: 1.8em;
+    }
+
+    .news-item img {
+        height: 180px;
+    }
+}
+
+
+.various_links {
+    background: #152f5d;
+    color: white;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.various_links .container {
+    display: grid;
+    grid-template-columns: 15% 17% 22% 41%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.various_links .column {
+    flex: 1;
+    min-width: 190px;
+    padding: 10px;
+}
+
+.various_links h3 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.various_links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.various_links ul li {
+    margin: 5px 0;
+    color: white;
+}
+
+.column.social-links ul li a,
+.column.article-links ul li a {
+    color: white;
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+
+.various_links .subscribe form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.various_links .subscribe-form {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 70%; /* Adjust width as needed */
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border:1px solid #ccc;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #45a049; /* Darken on hover */
+}
+
+.various_links .subscribe button:hover {
+    background-color: #4CAF50;
+}
+
+
+footer {
+    background: #0c0000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+
+/* Mobile Styles (Default) */
+.container {
+    width: 90%;
+}
+
+.news-events .container,
+.various_links .container {
+    display: block; /* Stack elements on top of each other on small screens */
+}
+
+/* Tablet Screens */
+@media (min-width: 768px) {
+    .featured-articles .articles-grid,
+    .news-events .container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .featured-articles article,
+    .news-item {
+        flex: 1; /* Make articles take equal width */
+    }
+
+    .various_links .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop Screens */
+@media (min-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .featured-articles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .news-events .container,
+    .various_links .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.nav-list.active {
+    display: block; /* Show menu on toggle */
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: inline-block;
+    }
+    .nav-list {
+        display: none; /* Hide menu initially */
+        flex-direction: column; /* Stack items */
+    }
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #11023d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
